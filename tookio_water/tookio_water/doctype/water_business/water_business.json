@@ -8,10 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "business_name",
-  "contact_person",
-  "column_break_dvyl",
   "phone",
-  "address"
+  "location"
  ],
  "fields": [
   {
@@ -22,29 +20,21 @@
    "reqd": 1
   },
   {
-   "fieldname": "address",
-   "fieldtype": "Text",
-   "label": "Address"
-  },
-  {
-   "fieldname": "contact_person",
-   "fieldtype": "Data",
-   "label": "Contact Person"
-  },
-  {
    "fieldname": "phone",
    "fieldtype": "Data",
    "label": "Phone",
    "reqd": 1
   },
   {
-   "fieldname": "column_break_dvyl",
-   "fieldtype": "Column Break"
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-16 18:23:34.609174",
+ "modified": "2025-12-18 17:01:36.891014",
  "modified_by": "Administrator",
  "module": "Tookio Water",
  "name": "Water Business",

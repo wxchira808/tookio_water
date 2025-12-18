@@ -9,10 +9,8 @@
  "field_order": [
   "customer_name",
   "business",
-  "address",
-  "column_break_ojrj",
   "phone",
-  "email",
+  "column_break_ojrj",
   "section_break_balance",
   "current_balance"
  ],
@@ -29,25 +27,15 @@
    "fieldname": "business",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Business",
+   "label": "WaterBusiness",
    "options": "Water Business",
    "reqd": 1
-  },
-  {
-   "fieldname": "address",
-   "fieldtype": "Text",
-   "label": "Address"
   },
   {
    "fieldname": "phone",
    "fieldtype": "Data",
    "label": "Phone",
    "reqd": 1
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
   },
   {
    "fieldname": "column_break_ojrj",
@@ -59,16 +47,15 @@
    "label": "Account Balance"
   },
   {
+   "default": "0",
    "fieldname": "current_balance",
    "fieldtype": "Currency",
-   "label": "Current Balance",
-   "read_only": 1,
-   "default": 0
+   "label": "Current Balance"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-16 18:23:07.984379",
+ "modified": "2025-12-18 17:02:23.610347",
  "modified_by": "Administrator",
  "module": "Tookio Water",
  "name": "Water Customer",

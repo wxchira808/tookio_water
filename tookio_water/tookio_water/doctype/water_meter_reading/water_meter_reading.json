@@ -17,6 +17,7 @@
   "previous_water_reading",
   "column_break_sjoa",
   "current_water_reading",
+  "column_break_ndxz",
   "units_used",
   "section_break_yqtj",
   "rate_per_unit",
@@ -28,7 +29,6 @@
   "payment_method",
   "notification_status",
   "column_break_tyqy",
-  "column_break_jduh",
   "amended_from"
  ],
  "fields": [
@@ -96,6 +96,7 @@
    "reqd": 1
   },
   {
+   "description": "Units",
    "fieldname": "units_used",
    "fieldtype": "Float",
    "label": "Units Used",
@@ -133,8 +134,7 @@
    "fieldname": "payment_method",
    "fieldtype": "Select",
    "label": "Payment Method",
-   "options": "\nMpesa\nBank\nCash",
-   "reqd": 1
+   "options": "\nMpesa\nBank\nCash"
   },
   {
    "fieldname": "section_break_payment",
@@ -167,10 +167,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_jduh",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -179,12 +175,16 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ndxz",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-12-18 16:55:45.362499",
+ "modified": "2025-12-18 17:08:04.026610",
  "modified_by": "Administrator",
  "module": "Tookio Water",
  "name": "Water Meter Reading",
