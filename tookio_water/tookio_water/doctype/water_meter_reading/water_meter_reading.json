@@ -17,15 +17,19 @@
   "previous_water_reading",
   "column_break_sjoa",
   "current_water_reading",
-  "column_break_prcq",
   "units_used",
   "section_break_yqtj",
-  "billed_amount",
+  "rate_per_unit",
   "column_break_nphk",
+  "billed_amount",
+  "section_break_payment",
+  "actual_paid_amount",
+  "column_break_payment",
   "payment_method",
-  "column_break_mjgd",
-  "remaining_balance",
-  "notification_status"
+  "notification_status",
+  "column_break_tyqy",
+  "column_break_jduh",
+  "amended_from"
  ],
  "fields": [
   {
@@ -53,17 +57,21 @@
    "reqd": 1
   },
   {
+   "description": "Units",
    "fieldname": "previous_water_reading",
    "fieldtype": "Float",
    "label": "Previous Water Reading",
-   "precision": "3"
+   "precision": "3",
+   "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nPaid\nUnpaid",
+   "options": "Unpaid\nPartially Paid\nPaid",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -79,6 +87,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "description": "Units",
    "fieldname": "current_water_reading",
    "fieldtype": "Float",
    "in_list_view": 1,
@@ -87,24 +96,34 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_prcq",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "units_used",
    "fieldtype": "Float",
    "label": "Units Used",
-   "precision": "3"
+   "precision": "3",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_yqtj",
    "fieldtype": "Section Break"
   },
   {
+   "fieldname": "rate_per_unit",
+   "fieldtype": "Float",
+   "label": "Rate per Unit",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
    "fieldname": "billed_amount",
    "fieldtype": "Currency",
    "label": "Billed Amount",
+   "read_only": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "actual_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Paid Amount"
   },
   {
    "fieldname": "column_break_nphk",
@@ -113,23 +132,28 @@
   {
    "fieldname": "payment_method",
    "fieldtype": "Select",
-   "label": "Payment Method"
+   "label": "Payment Method",
+   "options": "\nMpesa\nBank\nCash",
+   "reqd": 1
   },
   {
-   "fieldname": "column_break_mjgd",
+   "fieldname": "section_break_payment",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "column_break_payment",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "remaining_balance",
-   "fieldtype": "Currency",
-   "label": "Remaining Balance"
-  },
-  {
+   "allow_on_submit": 1,
+   "default": "Not Sent",
    "fieldname": "notification_status",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Notification Status",
    "options": "Not Sent\nSent\nFailed",
-   "default": "Not Sent"
+   "read_only": 1
   },
   {
    "fetch_from": "customer.phone",
@@ -137,11 +161,30 @@
    "fieldname": "phone_number",
    "fieldtype": "Data",
    "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_tyqy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jduh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Water Meter Reading",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-12-16 18:25:20.720480",
+ "modified": "2025-12-18 16:55:45.362499",
  "modified_by": "Administrator",
  "module": "Tookio Water",
  "name": "Water Meter Reading",

@@ -12,7 +12,9 @@
   "address",
   "column_break_ojrj",
   "phone",
-  "email"
+  "email",
+  "section_break_balance",
+  "current_balance"
  ],
  "fields": [
   {
@@ -50,6 +52,18 @@
   {
    "fieldname": "column_break_ojrj",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_balance",
+   "fieldtype": "Section Break",
+   "label": "Account Balance"
+  },
+  {
+   "fieldname": "current_balance",
+   "fieldtype": "Currency",
+   "label": "Current Balance",
+   "read_only": 1,
+   "default": 0
   }
  ],
  "index_web_pages_for_search": 1,
