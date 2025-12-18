@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TKW-{#######}",
+ "creation": "2025-12-16 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "customer",
+  "phone_number",
+  "column_break_cfrh",
+  "business_name",
+  "status",
+  "section_break_owzy",
+  "previous_water_reading",
+  "column_break_sjoa",
+  "current_water_reading",
+  "column_break_prcq",
+  "units_used",
+  "section_break_yqtj",
+  "billed_amount",
+  "column_break_nphk",
+  "payment_method",
+  "column_break_mjgd",
+  "remaining_balance",
+  "notification_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Business Name",
+   "options": "Water Business",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Water Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "previous_water_reading",
+   "fieldtype": "Float",
+   "label": "Previous Water Reading",
+   "precision": "3"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPaid\nUnpaid",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cfrh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_owzy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sjoa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_water_reading",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Current Water Reading",
+   "precision": "3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_prcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "units_used",
+   "fieldtype": "Float",
+   "label": "Units Used",
+   "precision": "3"
+  },
+  {
+   "fieldname": "section_break_yqtj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "billed_amount",
+   "fieldtype": "Currency",
+   "label": "Billed Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nphk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method"
+  },
+  {
+   "fieldname": "column_break_mjgd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remaining_balance",
+   "fieldtype": "Currency",
+   "label": "Remaining Balance"
+  },
+  {
+   "fieldname": "notification_status",
+   "fieldtype": "Select",
+   "label": "Notification Status",
+   "options": "Not Sent\nSent\nFailed",
+   "default": "Not Sent"
+  },
+  {
+   "fetch_from": "customer.phone",
+   "fetch_if_empty": 1,
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-16 18:25:20.720480",
+ "modified_by": "Administrator",
+ "module": "Tookio Water",
+ "name": "Water Meter Reading",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer",
+ "track_changes": 1
+}
